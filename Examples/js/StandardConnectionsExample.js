@@ -82,8 +82,8 @@ function loadJSON(path, cb, isLocal) {
     obj.open("GET", "../json/" + path + ".json", true);
   }
   else {
-    /*obj.open("GET", "http://jsonplaceholder.typicode.com/" + path, true);*/
-    obj.open("GET", "https://api.ap.org/v2/elections/2020-11-03?statepostal=WI&resultstype=t&level=ru&format=json&apikey=bAcPmpDWG3q7sxzFnD5QB6EvIpwIfmeT&officeID=P&raceTypeId=G/", true);
+    obj.open("GET", "http://jsonplaceholder.typicode.com/" + path, true);
+    /*obj.open("GET", "https://api.ap.org/v2/elections/2020-11-03?statepostal=WI&resultstype=t&level=ru&format=json&apikey=bAcPmpDWG3q7sxzFnD5QB6EvIpwIfmeT&officeID=P&raceTypeId=G/", true);*/
   }
   obj.onreadystatechange = function() {
     if (obj.readyState == 4 && obj.status == "200"){
